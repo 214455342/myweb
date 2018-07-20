@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+import mysite.views as siteviews
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('filter/', siteviews.fiter_test),
+    path('news_list/<str:news_type>', siteviews.news_list),
 ]
